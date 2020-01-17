@@ -185,6 +185,7 @@ public class Review {
        
             
     }
+    //this is my starRating() method
     public static int starRating(String fileName)
     {
       double totalValue = totalSentimentVal(fileName);
