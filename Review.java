@@ -164,5 +164,22 @@ public class Review {
     } else {
       return randomNegativeAdj();
     }
+   public static int starRating(String fileName)
+   {
+      double totalValue = totalSentimentVal(fileName);
+      if(totalValue >= 1)
+      {
+         return 5;
+      }
+      else if(totalValue >= 0)
+      {
+         return 3;
+      }
+      else
+      {
+         return 1;
+      }
+    }
+
   }
 }
