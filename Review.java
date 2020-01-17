@@ -165,10 +165,12 @@ public class Review {
     {
       String theReview = textToString(fileName);
       String newString = "";
+     //I added double wordValue as a placeholder, same as int totalValue
       double wordValue = 0.0;
       int totalValue = 0;
       for(int i = 0;i<theReview.length();i++)
       {
+        //if the character equals a space then everything before it is a word and we can find the total sentiment value of the word. else, we continue through it as if it were a word. 
          if(word.substring(i,i+1).equals(" "))
          {
             newString.removePunctuation(word);
