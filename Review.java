@@ -167,14 +167,17 @@ public class Review {
    public static int starRating(String fileName)
    {
       double totalValue = totalSentimentVal(fileName);
+     //any value above one is considered a good value, so 5 stars
       if(totalValue >= 1)
       {
          return 5;
       }
+     //values between 0 and 1 are ok so 3 stars
       else if(totalValue >= 0)
       {
          return 3;
       }
+     //values below 0 are bad, so 1 star
       else
       {
          return 1;
