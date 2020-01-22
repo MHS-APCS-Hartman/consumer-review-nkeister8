@@ -204,19 +204,24 @@ public class Review {
          return 1;
       }
      }
+    
      public static String fakeReview(String fileName)
      {
+       //open file
       String file = textToString(fileName);
+       //word acts as a placeholder
       String word = "";
       boolean asterisk = false;
-
+      //loop through and pick each word
       for(int i = 0; i<file.length();i++)
       {
          String let = file.substring(i,i+1);
+        //if star, replace with adjective
          if (file.substring(i, i+1).equals("*"))
          {
             asterisk = true;
          }
+        //if space its end of word, add the word before to adjective
          else if (file.substring(i, i+1).equals(" ") && asterisk)
       	 {
         		word += randomAdjective() + " ";
@@ -227,6 +232,7 @@ public class Review {
         		word += file.substring(i, i+1);
       	  }
        }
+       //returns the word
       return word;
      }    
      //Answers to Questions
