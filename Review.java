@@ -204,6 +204,31 @@ public class Review {
          return 1;
       }
      }
+     public static String fakeReview(String fileName)
+     {
+      String file = textToString(fileName);
+      String word = "";
+      boolean asterisk = false;
+
+      for(int i = 0; i<file.length();i++)
+      {
+         String let = file.substring(i,i+1);
+         if (file.substring(i, i+1).equals("*"))
+         {
+            asterisk = true;
+         }
+         else if (file.substring(i, i+1).equals(" ") && asterisk)
+      	 {
+        		word += randomAdjective() + " ";
+        		asterisk = false;
+      	 }
+ 	       else if (asterisk == false)
+      	 {
+        		word += file.substring(i, i+1);
+      	  }
+       }
+      return word;
+     }    
      //Answers to Questions
      //4. The totalSentiment method works by processing each character of a string searching for a space. When it finds a space it takes all the previous letters, puts it into word and then takes out all pronuncation, and calls the getSentimentVal method and finds the sentiment value of the word. 
      //the sentiment value is then added to the total value, and then the string is reiterated as blank. Then the process starts all over again, until another space occurs. 
