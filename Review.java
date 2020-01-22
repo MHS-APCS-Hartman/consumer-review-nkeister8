@@ -211,7 +211,31 @@ public class Review {
      //5b. I could adjust the totalSentiment value by making even more specific ratings, I only had a 5 star, 3 star and 1 star, while i could have made even more specific star values.
      //6a. This student made an error with his if statements. By having it be < than 15 first, everything after it will also be true so you won't get an accurate rating. If there is a number such as 4 then it is technichnically less than 15, but that wasn't the right answer. It ws supposed to have printed the code that was under <5. 
      //6b. He could have fixed it by doing >= instead of <. Then if the number was four, it would have only printed out the rating <= 1. He would also have to change the rating for each if statement.        
-         
+     public static String fakeReview(String fileName)
+     {
+      String file = textToString(fileName);
+      String word = "";
+      boolean asterisk = false;
+      
+      for(int i = 0; i<file.length();i++)
+      {
+         String let = file.substring(i,i+1);
+         if (file.substring(i, i+1).equals("*"))
+         {
+            asterisk = true;
+         }
+         else if (file.substring(i, i+1).equals(" ") && asterisk)
+      	 {
+        		word += randomAdjective() + " ";
+        		asterisk = false;
+      	 }
+ 	       else if (asterisk == false)
+      	 {
+        		word += file.substring(i, i+1);
+      	  }
+       }
+      return word;
+     }    
             
             
          
