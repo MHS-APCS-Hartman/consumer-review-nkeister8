@@ -237,61 +237,6 @@ public class Review {
      //6a. This student made an error with his if statements. By having it be < than 15 first, everything after it will also be true so you won't get an accurate rating. If there is a number such as 4 then it is technichnically less than 15, but that wasn't the right answer. It ws supposed to have printed the code that was under <5. 
      //6b. He could have fixed it by doing >= instead of <. Then if the number was four, it would have only printed out the rating <= 1. He would also have to change the rating for each if statement.        
      
-    
-            
-            
-         
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   }
   
