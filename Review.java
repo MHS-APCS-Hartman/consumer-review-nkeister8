@@ -207,23 +207,6 @@ public class Review {
        
             
     }
-    //this is my starRating() method
-    public static int starRating(String fileName)
-    {
-      double totalValue = totalSentimentVal(fileName);
-      if(totalValue >= 1)
-      {
-         return 5;
-      }
-      else if(totalValue >= 0)
-      {
-         return 3;
-      }
-      else
-      {
-         return 1;
-      }
-     }
     
      public static String fakeReview(String fileName)
      {
